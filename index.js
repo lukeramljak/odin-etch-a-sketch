@@ -1,6 +1,6 @@
 const container = document.querySelector('.container');
 let gridSize = 16;
-let cellSize = Math.floor(600 / gridSize);
+let cellSize = Math.floor(500 / gridSize);
 
 function createGrid(gridSize, cellSize) {
   container.style.gridTemplateColumns = `repeat(${gridSize}, ${cellSize}px)`;
@@ -26,7 +26,7 @@ function getSizeResetGrid() {
     size = prompt('Enter a number');
   }
   gridSize = size;
-  cellSize = Math.floor(600 / gridSize);
+  cellSize = Math.floor(500 / gridSize);
   createGrid(size, cellSize);
 }
 
