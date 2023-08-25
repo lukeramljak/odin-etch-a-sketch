@@ -1,19 +1,13 @@
 const container = document.querySelector('.container');
 
 let gridSize = 16;
-let cellSize = Math.floor(960 / gridSize);
+let cellSize = Math.floor(600 / gridSize);
 
 createGrid(gridSize, cellSize);
 
 container.addEventListener('mouseover', (event) => {
   if (event.target.classList.contains('square')) {
     event.target.classList.add('square-hover');
-  }
-});
-
-container.addEventListener('mouseout', (event) => {
-  if (event.target.classList.contains('square')) {
-    event.target.classList.remove('square-hover');
   }
 });
 
@@ -42,6 +36,6 @@ function getSizeResetGrid() {
     size = prompt('Enter a number');
   }
   gridSize = size;
-  cellSize = Math.floor(960 / gridSize);
+  cellSize = Math.floor(600 / gridSize);
   createGrid(size, cellSize);
 }
