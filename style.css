@@ -19,11 +19,10 @@ header {
 }
 
 .container {
-  background-color: #141c25;
   display: grid;
   place-content: center;
-  margin: 1rem auto;
-  padding: 1rem;
+  width: 960px;
+  margin: 4rem auto;
 }
 
 .square {

@@ -1,6 +1,9 @@
 const container = document.querySelector('.container');
 
-createGrid(8);
+let gridSize = 16;
+let cellSize = Math.floor(960 / gridSize);
+
+createGrid(gridSize, cellSize);
 
 container.addEventListener('mouseover', (event) => {
   if (event.target.classList.contains('square')) {
@@ -14,13 +17,13 @@ container.addEventListener('mouseout', (event) => {
   }
 });
 
-function createGrid(size) {
-  container.style.gridTemplateColumns = `repeat(${size}, 24px)`;
-  container.style.gridTemplateRows = `repeat(${size}, 24px)`;
+function createGrid(gridSize, cellSize) {
+  container.style.gridTemplateColumns = `repeat(${gridSize}, ${cellSize}px)`;
+  container.style.gridTemplateRows = `repeat(${gridSize}, ${cellSize}px)`;
 
   let squares = new DocumentFragment();
 
-  for (let i = 0; i < size * size; i++) {
+  for (let i = 0; i < gridSize * gridSize; i++) {
     let square = document.createElement('div');
     square.classList.add('square');
     squares.appendChild(square);
@@ -38,5 +41,7 @@ function getSizeResetGrid() {
   while (size < 1 || size > 100) {
     size = prompt('Enter a number');
   }
-  createGrid(size);
+  gridSize = size;
+  cellSize = Math.floor(960 / gridSize);
+  createGrid(size, cellSize);
 }
