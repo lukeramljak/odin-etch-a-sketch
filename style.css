@@ -14,8 +14,7 @@ body {
 }
 
 header {
-  display: flex;
-  justify-content: center;
+  text-align: center;
   margin-top: 5rem;
 }
 
@@ -29,4 +28,8 @@ header {
 
 .square {
   outline: 1px solid #8e8e8e;
+}
+
+.square-hover {
+  background-color: #8e8e8e;
 }
