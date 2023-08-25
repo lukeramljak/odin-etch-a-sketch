@@ -21,7 +21,12 @@ header {
 
 .container {
   background-color: #141c25;
-  display: flex;
-  justify-content: center;
-  margin: 1rem 10rem;
+  display: grid;
+  place-content: center;
+  margin: 1rem auto;
+  padding: 1rem;
+}
+
+.square {
+  outline: 1px solid #8e8e8e;
 }
