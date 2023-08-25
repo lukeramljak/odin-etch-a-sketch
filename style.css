@@ -29,15 +29,24 @@ header {
 }
 
 .square {
-  outline: 1px solid #eeeeee;
-}
-
-.square-hover {
-  background-color: hsla(0, 0%, 56%, 0.4);
+  outline: 0.5px solid #eeeeee;
 }
 
 .button-area {
   display: flex;
   justify-content: center;
-  margin: 2rem 0;
+  margin: 1rem 0;
+}
+
+#btn {
+  cursor: pointer;
+  border: none;
+  color: #fcfcfc;
+  background-color: #2b4162;
+  padding: 10px 14px;
+  border-radius: 10px;
+}
+
+#btn:hover {
+  background-color: #1c2a40;
 }
