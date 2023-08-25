@@ -5,10 +5,10 @@ let cellSize = Math.floor(600 / gridSize);
 
 createGrid(gridSize, cellSize);
 
+const randomColour = Math.floor(Math.random() * 16777215).toString(16);
+
 container.addEventListener('mouseover', (event) => {
-  if (event.target.classList.contains('square')) {
-    event.target.classList.add('square-hover');
-  }
+  event.target.style.backgroundColor = "#" + randomColour;
 });
 
 function createGrid(gridSize, cellSize) {
