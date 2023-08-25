@@ -1,5 +1,4 @@
 const container = document.querySelector('.container');
-const randomColour = Math.floor(Math.random() * 16777215).toString(16);
 let gridSize = 16;
 let cellSize = Math.floor(600 / gridSize);
 
@@ -17,6 +16,10 @@ function createGrid(gridSize, cellSize) {
   container.appendChild(squares);
 }
 
+function getRandomColour() {
+  return '#' + Math.floor(Math.random() * 16777215).toString(16);
+}
+
 function getSizeResetGrid() {
   let size = 0;
   while (size < 1 || size > 100) {
@@ -28,7 +31,7 @@ function getSizeResetGrid() {
 }
 
 container.addEventListener('mouseover', (event) => {
-  event.target.style.backgroundColor = "#" + randomColour;
+  event.target.style.backgroundColor = getRandomColour();
 });
 
 const btn = document.getElementById('btn');
