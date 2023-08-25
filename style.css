@@ -31,5 +31,11 @@ header {
 }
 
 .square-hover {
-  background-color: #8e8e8e;
+  background-color: hsla(0, 0%, 56%, 0.4);
+}
+
+.button-area {
+  display: flex;
+  justify-content: center;
+  margin: 1rem 0;
 }

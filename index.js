@@ -27,3 +27,16 @@ function createGrid(size) {
   }
   container.appendChild(squares);
 }
+
+const btn = document.getElementById('btn');
+btn.addEventListener('click', () => {
+  getSizeResetGrid();
+});
+
+function getSizeResetGrid() {
+  let size = 0;
+  while (size < 1 || size > 100) {
+    size = prompt('Enter a number');
+  }
+  createGrid(size);
+}
