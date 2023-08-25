@@ -9,11 +9,13 @@
 }
 
 body {
+  font-family: 'Londrina Sketch', sans-serif;
   background-color: #0f0f0f;
   color: #fcfcfc;
 }
 
 header {
+  font-size: 1.75rem;
   text-align: center;
   margin-top: 2rem;
 }
