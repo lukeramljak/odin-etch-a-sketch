@@ -1,15 +1,7 @@
 const container = document.querySelector('.container');
-
+const randomColour = Math.floor(Math.random() * 16777215).toString(16);
 let gridSize = 16;
 let cellSize = Math.floor(600 / gridSize);
-
-createGrid(gridSize, cellSize);
-
-const randomColour = Math.floor(Math.random() * 16777215).toString(16);
-
-container.addEventListener('mouseover', (event) => {
-  event.target.style.backgroundColor = "#" + randomColour;
-});
 
 function createGrid(gridSize, cellSize) {
   container.style.gridTemplateColumns = `repeat(${gridSize}, ${cellSize}px)`;
@@ -25,11 +17,6 @@ function createGrid(gridSize, cellSize) {
   container.appendChild(squares);
 }
 
-const btn = document.getElementById('btn');
-btn.addEventListener('click', () => {
-  getSizeResetGrid();
-});
-
 function getSizeResetGrid() {
   let size = 0;
   while (size < 1 || size > 100) {
@@ -39,3 +26,14 @@ function getSizeResetGrid() {
   cellSize = Math.floor(600 / gridSize);
   createGrid(size, cellSize);
 }
+
+container.addEventListener('mouseover', (event) => {
+  event.target.style.backgroundColor = "#" + randomColour;
+});
+
+const btn = document.getElementById('btn');
+btn.addEventListener('click', () => {
+  getSizeResetGrid();
+});
+
+createGrid(gridSize, cellSize);
